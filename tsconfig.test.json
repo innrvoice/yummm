@@ -1,0 +1,8 @@
+{
+  "extends": "../tsconfig",
+  "include": ["src/Core/clients", "tests"],
+  "compilerOptions": {
+    "declaration": false,
+    "rootDir": "./"
+  }
+}

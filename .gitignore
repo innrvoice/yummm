@@ -1,0 +1,14 @@
+.vscode/*
+!.vscode/launch.json
+.idea
+yarn-error.log
+.build
+node_modules
+coverage
+.nyc_output
+lib
+out
+version.txt
+app.json
+tmp
+*.iml
