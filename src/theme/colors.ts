@@ -6,7 +6,20 @@ export const colors = {
   mediumGrey: '#d7d7d7',
   darkGrey: '#171717',
   darkGreyLighter: '#515151',
-  blue: '#209AD6',
   grey: '#4F4F4F',
   milk: '#F7F7F7',
+
+  lime: '#87C31B',
+  lightLime: '#BAFF3B',
+  orange: '#FCAE00',
+  lightOrange: '#FCCC00',
+  red: '#FF0711',
+  lightRed: '#DE4423',
+  purple: '#CC1BAA',
+  lightPurple: '#CC1BAA',
+  blue: '#6A8FC9',
+  lightBlue: '#77A1E5',
+  violet: '#7D00FF',
+  lightViolet: '#996BCB',
+
 };

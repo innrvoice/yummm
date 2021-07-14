@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="a" x1="34.34" y1="27.88" x2="34.34" y2="9.34" gradientUnits="userSpaceOnUse">
+      <stop offset="0.63" stop-color="#d61201"/>
+      <stop offset="0.64" stop-color="#db2c06"/>
+      <stop offset="0.67" stop-color="#e4530d"/>
+      <stop offset="0.69" stop-color="#eb7514"/>
+      <stop offset="0.72" stop-color="#f19219"/>
+      <stop offset="0.75" stop-color="#f6aa1d"/>
+      <stop offset="0.78" stop-color="#f9bc21"/>
+      <stop offset="0.83" stop-color="#fcc923"/>
+      <stop offset="0.88" stop-color="#fed025"/>
+      <stop offset="1" stop-color="#fed225"/>
+    </linearGradient>
+    <linearGradient id="b" x1="30.07" y1="-506.16" x2="30.07" y2="-554.56" gradientTransform="translate(-49.75 553.3) rotate(5.58)" gradientUnits="userSpaceOnUse">
+      <stop offset="0.37" stop-color="#d80001"/>
+      <stop offset="0.39" stop-color="#da0801"/>
+      <stop offset="0.6" stop-color="#ea3e01"/>
+      <stop offset="0.77" stop-color="#f56600"/>
+      <stop offset="0.91" stop-color="#fc7e00"/>
+      <stop offset="1" stop-color="#ff8700"/>
+    </linearGradient>
+    <linearGradient id="c" x1="17.16" y1="-527.8" x2="43.1" y2="-527.8" gradientTransform="translate(-49.75 553.3) rotate(5.58)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#d40001"/>
+      <stop offset="0" stop-color="#d40001"/>
+      <stop offset="0.29" stop-color="#e72401"/>
+      <stop offset="0.56" stop-color="#f43d00"/>
+      <stop offset="0.81" stop-color="#fc4d00"/>
+      <stop offset="1" stop-color="#ff5200"/>
+    </linearGradient>
+    <linearGradient id="d" x1="19.88" y1="-519.02" x2="35.86" y2="-519.02" gradientTransform="translate(-49.75 553.3) rotate(5.58)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#e35d05"/>
+      <stop offset="0.51" stop-color="#f6f70b"/>
+      <stop offset="0.56" stop-color="#f5f20b"/>
+      <stop offset="0.63" stop-color="#f3e50a"/>
+      <stop offset="0.7" stop-color="#f0ce09"/>
+      <stop offset="0.77" stop-color="#ecae08"/>
+      <stop offset="0.84" stop-color="#e68506"/>
+      <stop offset="0.92" stop-color="#df5304"/>
+      <stop offset="0.99" stop-color="#d71901"/>
+      <stop offset="1" stop-color="#d61201"/>
+    </linearGradient>
+  </defs>
+  <g>
+    <path d="M45.4,21.78a22.14,22.14,0,0,0-2.11-2.14,15.07,15.07,0,0,1-2.67-3,5.56,5.56,0,0,1-.83-2.84,4.71,4.71,0,0,1,0-.53,1.85,1.85,0,0,0-.14.14,5.35,5.35,0,0,0-1.28,2.26,4.1,4.1,0,0,0-.12.64l-.22,5.26L35.2,17.06a7.88,7.88,0,0,1-1-4.08,11.57,11.57,0,0,1,.62-3.64A11,11,0,0,0,32,11.87a13.09,13.09,0,0,0-2,3.69l-1.3,3.56-1.52-2.91a8.89,8.89,0,0,1-.42,1A17.91,17.91,0,0,1,23.27,22a6,6,0,0,1-.53,2.11L46,27.88A44.45,44.45,0,0,1,45.4,21.78Z" opacity="0.45" fill="url(#a)"/>
+    <path d="M46.62,23.19a3,3,0,0,0-1.14-2.67c-3.07-3.32-7.27-5.28-2.57-10.41-6.15,1.06-6.59,6-6.59,6s-2.6-4.61,3.33-11.31c-4.27,3.12-8.22,3.34-10.89,10A6,6,0,0,0,26.49,12s1.84,3.12-3.69,8.35A5.41,5.41,0,0,0,20.44,23c-.72,1.79,1.22,18.35-.88,20.77s-3.47,2.32-4.09,4,1.37,3.5,3.74,3.69C45.67,53.48,46.62,23.19,46.62,23.19Z" fill="url(#b)"/>
+    <path d="M45.31,23.09A3.25,3.25,0,0,0,43,19.66a6.92,6.92,0,0,1-2.83-3,5.34,5.34,0,0,1-.66-2.77c0-.16,0-.33,0-.5l-.13.13a5.34,5.34,0,0,0-1.3,2.16,4,4,0,0,0-.14.61l-.28,3.27-1.16,0L35.08,17a7.8,7.8,0,0,1-.76-4,11.5,11.5,0,0,1,.75-3.5,10.6,10.6,0,0,0-2.74,2.38,13.22,13.22,0,0,0-2,3.53L29,18.85,27.66,16a9.46,9.46,0,0,1-.43.93c-.7,1.35-1.57,2.06-3.88,3.86v0a5.51,5.51,0,0,0-1.65,2.23c-.66,1.79.88,18.32-1,20.76s-3.17,2.34-3.75,4.06,1.19,3.49,3.33,3.65C44.09,53.35,45.31,23.09,45.31,23.09Z" opacity="0.45" fill="url(#c)"/>
+    <path d="M35.36,29.94A2.64,2.64,0,0,1,32.53,28c-2.13.14-2.67-.23-2.67-.23,1.18,2.86,5,4.39,8.54,3.41s5.45-4.08,4.27-6.94a10,10,0,0,1-5.27,3C37.3,27.35,37.54,29.6,35.36,29.94Z" fill="#fff"/>
+    <path d="M21.58,29.33a2.21,2.21,0,0,0,2.49-1.79v0a11.59,11.59,0,0,0,4.52.39,6,6,0,0,1-6.88,2.63" fill="#fff"/>
+    <path d="M20.56,39.32A8.3,8.3,0,0,1,25,38.44c7.39.57,9.57,3.93,9.57,3.93,1.31.1,1.75-2,1.88-3,0,0-4.27-2.58-11.95-2.4a17,17,0,0,0-4,.82Z" opacity="0.45" fill="url(#d)"/>
+  </g>
+  <path d="M21.48,26.93l.1,2.38s2.21.24,2.55-1.77C22.36,27.17,21.48,26.93,21.48,26.93Z" fill="#b7060c"/>
+  <path d="M32.56,28a2.69,2.69,0,0,0,3,1.87,2,2,0,0,0,1.75-2.54,13.84,13.84,0,0,1-2.37.53A23.55,23.55,0,0,1,32.56,28Z" fill="#b7060c"/>
+</svg>
