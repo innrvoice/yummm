@@ -18,8 +18,8 @@ export default createUseStyles<string, INeededProps>(
     root: {
       color: colors.black,
       border: `1px solid ${colors.grey}`,
-      width: (props: INeededProps) => props.enlargedSize ? 50 : 40,
-      height: (props: INeededProps) => props.enlargedSize ? 50 : 40,
+      width: (props: INeededProps) => props.enlargedSize ? 60 : 50,
+      height: (props: INeededProps) => props.enlargedSize ? 60 : 50,
       borderRadius: '50%',
       backgroundImage: `linear-gradient(top, rgba(255,255,255, 0) 20%, ${colors.lightGrey} 100%)`,
       backgroundSize: '100%',
@@ -69,22 +69,22 @@ export default createUseStyles<string, INeededProps>(
         transform: 'rotate(4deg)',
       },
     },
-    taste1bg: {
+    tasteLolBg: {
       backgroundImage: `linear-gradient(top, rgba(255,255,255, 0) 20%, ${colors.lightOrange} 100%)`,
     },
-    taste2bg: {
+    tasteLoveBg: {
       backgroundImage: `linear-gradient(top, rgba(255,255,255, 0) 20%, ${colors.lightPurple} 100%)`,
     },
-    taste3bg: {
+    tasteAngryBg: {
       backgroundImage: `linear-gradient(top, rgba(255,255,255, 0) 20%, ${colors.lightRed} 100%)`,
     },
-    taste4bg: {
+    tasteSadBg: {
       backgroundImage: `linear-gradient(top, rgba(255,255,255, 0) 20%, ${colors.lightBlue} 100%)`,
     },
-    taste5bg: {
+    tasteDizzyBg: {
       backgroundImage: `linear-gradient(top, rgba(255,255,255, 0) 20%, ${colors.lightViolet} 100%)`,
     },
-    taste6bg: {
+    tasteSurprisedBg: {
       backgroundImage: `linear-gradient(top, rgba(255,255,255, 0) 20%, ${colors.lightLime} 100%)`,
     },
     taste: {
@@ -93,68 +93,72 @@ export default createUseStyles<string, INeededProps>(
       backgroundSize: '100%',
       backgroundPosition: 'center center',
       backgroundRepeat: 'no-repeat',
-      filter: (props: INeededProps) => props.tasteGrayscale ? 'grayscale(100%)' : 'grascale(0)',
+      filter: (props: INeededProps) => props.tasteGrayscale ? 'grayscale(100%)' : 'grayscale(0)',
     },
-    taste1: {
+    tasteLol: {
       '&:hover': {
         animation: '$jiggle 1s 2 ease-in',
         transformOrigin: 'center center 0',
+        filter: 'grayscale(0)',
       },
       backgroundImage: `url(${lol})`,
     },
-    taste2: {
-      '&:hover': {
-        animation: '$jiggle 0.5s 2 ease-in',
-        transformOrigin: 'center center 0',
-      },
-      backgroundImage: `url(${love})`,
-    },
-    taste3: {
-      '&:hover': {
-        animation: '$jiggle 0.5s 2 ease-in',
-        transformOrigin: 'center center 0',
-      },
-      backgroundImage: `url(${angry})`,
-    },
-    taste4: {
-      '&:hover': {
-        animation: '$jiggle 0.5s 2 ease-in',
-        transformOrigin: 'center center 0',
-      },
-      backgroundImage: `url(${sad})`,
-    },
-    taste5: {
-      '&:hover': {
-        animation: '$jiggle 0.5s 2 ease-in',
-        transformOrigin: 'center center 0',
-      },
-      backgroundImage: `url(${dizzy})`,
-    },
-    taste6: {
+    tasteLove: {
       '&:hover': {
         animation: '$jiggle 0.5s 2 ease-in',
         transformOrigin: 'center center 0',
         filter: 'grayscale(0)',
-        border: `1px solid ${colors.lime}`,
+      },
+      backgroundImage: `url(${love})`,
+    },
+    tasteAngry: {
+      '&:hover': {
+        animation: '$jiggle 0.5s 2 ease-in',
+        transformOrigin: 'center center 0',
+        filter: 'grayscale(0)',
+      },
+      backgroundImage: `url(${angry})`,
+    },
+    tasteSad: {
+      '&:hover': {
+        animation: '$jiggle 0.5s 2 ease-in',
+        transformOrigin: 'center center 0',
+        filter: 'grayscale(0)',
+      },
+      backgroundImage: `url(${sad})`,
+    },
+    tasteDizzy: {
+      '&:hover': {
+        animation: '$jiggle 0.5s 2 ease-in',
+        transformOrigin: 'center center 0',
+        filter: 'grayscale(0)',
+      },
+      backgroundImage: `url(${dizzy})`,
+    },
+    tasteSurprised: {
+      '&:hover': {
+        animation: '$jiggle 0.5s 2 ease-in',
+        transformOrigin: 'center center 0',
+        filter: 'grayscale(0)',
       },
       backgroundImage: `url(${surprised})`,
     },
-    taste1border: {
+    tasteLolBorder: {
       border: (props: INeededProps) => props.borderBig ? `4px solid ${colors.orange}` : `1px solid ${colors.orange}`,
     },
-    taste2border: {
+    tasteLoveBorder: {
       border: (props: INeededProps) => props.borderBig ? `4px solid ${colors.purple}` : `1px solid ${colors.purple}`,
     },
-    taste3border: {
+    tasteAngryBorder: {
       border: (props: INeededProps) => props.borderBig ? `4px solid ${colors.red}` : `1px solid ${colors.red}`,
     },
-    taste4border: {
+    tasteSadBorder: {
       border: (props: INeededProps) => props.borderBig ? `4px solid ${colors.blue}` : `1px solid ${colors.blue}`,
     },
-    taste5border: {
+    tasteDizzyBorder: {
       border: (props: INeededProps) => props.borderBig ? `4px solid ${colors.violet}` : `1px solid ${colors.violet}`,
     },
-    taste6border: {
+    tasteSurprisedBorder: {
       border: (props: INeededProps) => props.borderBig ? `4px solid ${colors.lime}` : `1px solid ${colors.lime}`,
     },
   },

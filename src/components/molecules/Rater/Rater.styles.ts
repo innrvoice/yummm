@@ -13,6 +13,10 @@ import { createUseStyles } from 'react-jss';
 //   tasteGrayscale?: boolean;
 // }
 
+const FLYOUT = '-100px';
+
+const STATFLYOUT = '-155px';
+
 export default createUseStyles(
   {
     root: {
@@ -37,35 +41,34 @@ export default createUseStyles(
     transparent: {
       opacity: 0,
     },
-    flyLol: {
+    fly1: {
       opacity: 1,
-      transform: 'rotate(90deg) translateX(-85px) rotate(-90deg) translateY(-50%) translateX(50%)',
+      transform: `rotate(90deg) translateX(${FLYOUT}) rotate(-90deg) translateY(-50%) translateX(50%)`,
       transition: 'all 0.1s ease-in',
     },
-    flyLove: {
+    fly2: {
       opacity: 1,
-      transform: 'rotate(54deg) translateX(-85px) rotate(-54deg) translateY(-50%) translateX(50%)',
+      transform: `rotate(54deg) translateX(${FLYOUT}) rotate(-54deg) translateY(-50%) translateX(50%)`,
       transition: 'all 0.1s ease-in',
     },
-    flyAngry:  {
+    fly3:  {
       opacity: 1,
-      transform: 'rotate(18deg) translateX(-85px) rotate(-18deg) translateY(-50%) translateX(50%)',
+      transform: `rotate(18deg) translateX(${FLYOUT}) rotate(-18deg) translateY(-50%) translateX(50%)`,
       transition: 'all 0.1s ease-in',
     },
-    flySad: {
+    fly4: {
       opacity: 1,
-      transform: 'rotate(-18deg) translateX(-85px) rotate(18deg) translateY(-50%) translateX(50%)',
+      transform: `rotate(-18deg) translateX(${FLYOUT}) rotate(18deg) translateY(-50%) translateX(50%)`,
       transition: 'all 0.1s ease-in',
     },
-    flyDizzy: {
+    fly5: {
       opacity: 1,
-      transform: 'rotate(-54deg) translateX(-85px) rotate(54deg) translateY(-50%) translateX(50%)',
+      transform: `rotate(-54deg) translateX(${FLYOUT}) rotate(54deg) translateY(-50%) translateX(50%)`,
       transition: 'all 0.1s ease-in',
     },
-
-    flySurprised: {
+    fly6: {
       opacity: 1,
-      transform: 'rotate(-90deg) translateX(-85px) rotate(90deg) translateY(-50%) translateX(50%)',
+      transform: `rotate(-90deg) translateX(${FLYOUT}) rotate(90deg) translateY(-50%) translateX(50%)`,
       transition: 'all 0.1s ease-in',
     },
     stat: {
@@ -100,34 +103,34 @@ export default createUseStyles(
     statSurprised: {
       color: `${colors.lime}`,
     },
-    statsLolFly: {
+    stats1Fly: {
       opacity: 1,
-      transform: 'rotate(90deg) translateX(-130px) rotate(-90deg) translateY(-50%) translateX(50%)',
+      transform: `rotate(90deg) translateX(${STATFLYOUT}) rotate(-90deg) translateY(-50%) translateX(50%)`,
       transition: 'all 0.1s ease-in',
     },
-    statsLoveFly: {
+    stats2Fly: {
       opacity: 1,
-      transform: 'rotate(54deg) translateX(-130px) rotate(-54deg) translateY(-50%) translateX(50%)',
+      transform: `rotate(54deg) translateX(${STATFLYOUT}) rotate(-54deg) translateY(-50%) translateX(50%)`,
       transition: 'all 0.1s ease-in',
     },
-    statsAngryFly: {
+    stats3Fly: {
       opacity: 1,
-      transform: 'rotate(18deg) translateX(-130px) rotate(-18deg) translateY(-50%) translateX(50%)',
+      transform: `rotate(18deg) translateX(${STATFLYOUT}) rotate(-18deg) translateY(-50%) translateX(50%)`,
       transition: 'all 0.1s ease-in',
     },
-    statsSadFly: {
+    stats4Fly: {
       opacity: 1,
-      transform: 'rotate(-18deg) translateX(-130px) rotate(18deg) translateY(-50%) translateX(50%)',
+      transform: `rotate(-18deg) translateX(${STATFLYOUT}) rotate(18deg) translateY(-50%) translateX(50%)`,
       transition: 'all 0.1s ease-in',
     },
-    statsDizzyFly: {
+    stats5Fly: {
       opacity: 1,
-      transform: 'rotate(-54deg) translateX(-130px) rotate(54deg) translateY(-50%) translateX(50%)',
+      transform: `rotate(-54deg) translateX(${STATFLYOUT}) rotate(54deg) translateY(-50%) translateX(50%)`,
       transition: 'all 0.1s ease-in',
     },
-    statsSurprisedFly: {
+    stats6Fly: {
       opacity: 1,
-      transform: 'rotate(-90deg) translateX(-130px) rotate(90deg) translateY(-50%) translateX(50%)',
+      transform: `rotate(-90deg) translateX(${STATFLYOUT}) rotate(90deg) translateY(-50%) translateX(50%)`,
       transition: 'all 0.1s ease-in',
     },
   },

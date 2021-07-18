@@ -36,7 +36,7 @@ const Rater: React.FC<IRaterProps> = ({
     <div className={cx(classes.root)}>
       <div
         className={cx(classes.tasteWrap, classes.transparent, {
-          [classes.flyLol]: raterOpen,
+          [classes.fly1]: raterOpen,
         })}
       >
         <Taste
@@ -51,14 +51,14 @@ const Rater: React.FC<IRaterProps> = ({
       <div
         className={cx(classes.stat, {
           [classes.statLol]: tastesStats && tastesStats.lol,
-          [classes.statsLolFly]: raterOpen,
+          [classes.stats1Fly]: raterOpen,
         })}
       >
         {tastesStats.lol ? tastesStats.lol : ''}
       </div>
       <div
         className={cx(classes.tasteWrap, classes.transparent, {
-          [classes.flyLove]: raterOpen,
+          [classes.fly2]: raterOpen,
         })}
       >
         <Taste
@@ -73,80 +73,14 @@ const Rater: React.FC<IRaterProps> = ({
       <div
         className={cx(classes.stat, {
           [classes.statLove]: tastesStats && tastesStats.love,
-          [classes.statsLoveFly]: raterOpen,
+          [classes.stats2Fly]: raterOpen,
         })}
       >
         {tastesStats.love ? tastesStats.love : ''}
       </div>
       <div
         className={cx(classes.tasteWrap, classes.transparent, {
-          [classes.flyAngry]: raterOpen,
-        })}
-      >
-        <Taste
-          taste={'angry'}
-          tasteGrayscale={!tastesStats.angry}
-          enlargedSize={winningTaste === 'angry' ? true : false}
-          tasteBg={tastesStats.angry ? 'angry' : undefined}
-          tasteBorder={tastesStats.angry ? 'angry' : undefined}
-          borderBig={ratedTaste && ratedTaste === 'angry' ? true : false}
-        />
-      </div>
-      <div
-        className={cx(classes.stat, {
-          [classes.statAngry]: tastesStats && tastesStats.angry,
-          [classes.statsAngryFly]: raterOpen,
-        })}
-      >
-        {tastesStats.angry ? tastesStats.angry : ''}
-      </div>
-      <div
-        className={cx(classes.tasteWrap, classes.transparent, {
-          [classes.flySad]: raterOpen,
-        })}
-      >
-        <Taste
-          taste={'sad'}
-          tasteGrayscale={!tastesStats.sad}
-          enlargedSize={winningTaste === 'sad' ? true : false}
-          tasteBg={tastesStats.sad ? 'sad' : undefined}
-          tasteBorder={tastesStats.sad ? 'sad' : undefined}
-          borderBig={ratedTaste && ratedTaste === 'sad' ? true : false}
-        />
-      </div>
-      <div
-        className={cx(classes.stat, {
-          [classes.statSad]: tastesStats && tastesStats.sad,
-          [classes.statsSadFly]: raterOpen,
-        })}
-      >
-        {tastesStats.sad ? tastesStats.sad : ''}
-      </div>
-      <div
-        className={cx(classes.tasteWrap, classes.transparent, {
-          [classes.flyDizzy]: raterOpen,
-        })}
-      >
-        <Taste
-          taste={'dizzy'}
-          tasteGrayscale={!tastesStats.dizzy}
-          enlargedSize={winningTaste === 'dizzy' ? true : false}
-          tasteBg={tastesStats.dizzy ? 'dizzy' : undefined}
-          tasteBorder={tastesStats.dizzy ? 'dizzy' : undefined}
-          borderBig={ratedTaste && ratedTaste === 'dizzy' ? true : false}
-        />
-      </div>
-      <div
-        className={cx(classes.stat, {
-          [classes.statDizzy]: tastesStats && tastesStats.dizzy,
-          [classes.statsDizzyFly]: raterOpen,
-        })}
-      >
-        {tastesStats.dizzy ? tastesStats.dizzy : ''}
-      </div>
-      <div
-        className={cx(classes.tasteWrap, classes.transparent, {
-          [classes.flySurprised]: raterOpen,
+          [classes.fly3]: raterOpen,
         })}
       >
         <Taste
@@ -161,10 +95,76 @@ const Rater: React.FC<IRaterProps> = ({
       <div
         className={cx(classes.stat, {
           [classes.statSurprised]: tastesStats && tastesStats.surprised,
-          [classes.statsSurprisedFly]: raterOpen,
+          [classes.stats3Fly]: raterOpen,
         })}
       >
         {tastesStats.surprised ? tastesStats.surprised : ''}
+      </div>
+      <div
+        className={cx(classes.tasteWrap, classes.transparent, {
+          [classes.fly4]: raterOpen,
+        })}
+      >
+        <Taste
+          taste={'angry'}
+          tasteGrayscale={!tastesStats.angry}
+          enlargedSize={winningTaste === 'angry' ? true : false}
+          tasteBg={tastesStats.angry ? 'angry' : undefined}
+          tasteBorder={tastesStats.angry ? 'angry' : undefined}
+          borderBig={ratedTaste && ratedTaste === 'angry' ? true : false}
+        />
+      </div>
+      <div
+        className={cx(classes.stat, {
+          [classes.statAngry]: tastesStats && tastesStats.angry,
+          [classes.stats4Fly]: raterOpen,
+        })}
+      >
+        {tastesStats.angry ? tastesStats.angry : ''}
+      </div>
+      <div
+        className={cx(classes.tasteWrap, classes.transparent, {
+          [classes.fly5]: raterOpen,
+        })}
+      >
+        <Taste
+          taste={'dizzy'}
+          tasteGrayscale={!tastesStats.dizzy}
+          enlargedSize={winningTaste === 'dizzy' ? true : false}
+          tasteBg={tastesStats.dizzy ? 'dizzy' : undefined}
+          tasteBorder={tastesStats.dizzy ? 'dizzy' : undefined}
+          borderBig={ratedTaste && ratedTaste === 'dizzy' ? true : false}
+        />
+      </div>
+      <div
+        className={cx(classes.stat, {
+          [classes.statDizzy]: tastesStats && tastesStats.dizzy,
+          [classes.stats5Fly]: raterOpen,
+        })}
+      >
+        {tastesStats.dizzy ? tastesStats.dizzy : ''}
+      </div>
+      <div
+        className={cx(classes.tasteWrap, classes.transparent, {
+          [classes.fly6]: raterOpen,
+        })}
+      >
+        <Taste
+          taste={'sad'}
+          tasteGrayscale={!tastesStats.surprised}
+          enlargedSize={winningTaste === 'sad' ? true : false}
+          tasteBg={tastesStats.surprised ? 'sad' : undefined}
+          tasteBorder={tastesStats.surprised ? 'sad' : undefined}
+          borderBig={ratedTaste && ratedTaste === 'sad' ? true : false}
+        />
+      </div>
+      <div
+        className={cx(classes.stat, {
+          [classes.statSad]: tastesStats && tastesStats.sad,
+          [classes.stats6Fly]: raterOpen,
+        })}
+      >
+        {tastesStats.sad ? tastesStats.sad : ''}
       </div>
       <div className={cx(classes.tasteWrap)} onClick={openRater}>
         <Taste
