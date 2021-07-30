@@ -39,6 +39,9 @@ const Rater: React.FC<IRaterProps> = ({
           [classes.fly1]: raterOpen,
         })}
       >
+        {raterOpen && (
+          <div className={classes.shadow} />
+        )}
         <Taste
           taste={'lol'}
           tasteGrayscale={!tastesStats.lol}

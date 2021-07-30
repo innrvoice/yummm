@@ -1,2 +1,2 @@
-export { default as VideoLinkPlayer } from './VideoLinkPlayer';
-export * from './VideoLinkPlayer';
+export { default as Player } from './Player';
+export * from './Player';

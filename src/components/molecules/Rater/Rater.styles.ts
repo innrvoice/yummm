@@ -1,5 +1,6 @@
 import { colors } from '../../../theme';
 import { createUseStyles } from 'react-jss';
+import shadow from '../../../assets/shadow.svg';
 // import lol from '../../../assets/tastes/lol.svg';
 // import love from '../../../assets/tastes/love.svg';
 // import angry from '../../../assets/tastes/angry.svg';
@@ -21,10 +22,22 @@ export default createUseStyles(
   {
     root: {
       color: colors.black,
-      border: `1px solid ${colors.grey}`,
-      width: '160px',
-      height: '160px',
+      width: '60px',
+      height: '60px',
       position: 'relative',
+    },
+
+    shadow: {
+      position: 'absolute',
+      backgroundImage: `url(${shadow})`,
+      backgroundRepeat: 'no-repeat',
+      backgroundPosition: 'center center',
+      backgroundSize: '100%',
+      width: 700,
+      height: 1400,
+      top: 0,
+      transform: 'translateY(-41%)',
+      zIndex: -1,
     },
     tasteWrap: {
       position: 'absolute',

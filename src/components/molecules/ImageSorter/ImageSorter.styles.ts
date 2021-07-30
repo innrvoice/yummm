@@ -47,7 +47,7 @@ export default createUseStyles(
       display: 'flex',
       flexWrap: 'wrap',
       opacity: 0.4,
-    }
+    },
   },
   { name: 'Rater' },
 );

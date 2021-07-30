@@ -12,6 +12,7 @@ const ImageSorter: React.FC<IImageSorterProps> = ({ images }) => {
 
   const [imgs, setImgs] = React.useState(images);
   const [isDragging, setIsDragging] = React.useState(-1);
+  const [animate, setAnimate] = React.useState(0) as any;
 
   let refs = {} as any; // Record<string, Record<string, React.Ref<HTMLElement> | number>>;
 
@@ -86,6 +87,11 @@ const ImageSorter: React.FC<IImageSorterProps> = ({ images }) => {
     setIsDragging(-1);
   };
 
+  const onDrag = (index: number) => (event, info) => {
+    console.log('aaaaaaaaaa', info.point.x, info.point.y);
+    setTimeout(() => setAnimate(info.point.x), 500);
+  };
+
   const Item = (img: string, index: number) => {
     const ref = React.useRef(null);
 
@@ -97,7 +103,7 @@ const ImageSorter: React.FC<IImageSorterProps> = ({ images }) => {
       <motion.div
         ref={ref}
         key={`image${index}${Math.random()}`}
-        animate={{ x: 0, y: 0 }}
+        animate={{ x: animate, y: 0 }}
         style={{ backgroundImage: `url(${img}` }}
         className={classes.imageWrap}
         whileDrag={{
@@ -105,6 +111,7 @@ const ImageSorter: React.FC<IImageSorterProps> = ({ images }) => {
           zIndex: 4,
         }}
         drag={true}
+        onDrag={onDrag(index)}
         dragConstraints={constraintsRef}
         onDragEnd={drag(index)}
         dragElastic={0.2}
