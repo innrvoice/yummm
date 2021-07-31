@@ -18,41 +18,59 @@ export default createUseStyles<string, INeededProps>(
     root: {
       color: colors.black,
       border: `1px solid ${colors.grey}`,
-      width: (props: INeededProps) => props.enlargedSize ? 60 : 50,
-      height: (props: INeededProps) => props.enlargedSize ? 60 : 50,
+      width: (props: INeededProps) => props.enlargedSize ? 55 : 45,
+      height: (props: INeededProps) => props.enlargedSize ? 55 : 45,
       borderRadius: '50%',
       backgroundImage: `linear-gradient(top, rgba(255,255,255, 0) 20%, ${colors.lightGrey} 100%)`,
       backgroundSize: '100%',
       backgroundPosition: 'center center',
     },
     hoverLol: {
+      transform: 'scale(1)',
+      transition: 'scale 0.1s ease-in',
       '&:hover': {
         border: `4px solid ${colors.orange}`,
+        transform: 'scale(1.04)',
       },
     },
     hoverLove: {
+      transform: 'scale(1)',
+      transition: 'scale 0.1s ease-in',
       '&:hover': {
         border: `4px solid ${colors.purple}`,
+        transform: 'scale(1.04)',
       },
     },
     hoverAngry: {
+      transform: 'scale(1)',
+      transition: 'all 0.1s ease-in',
       '&:hover': {
         border: `4px solid ${colors.red}`,
+        transform: 'scale(1.04)',
       },
     },
     hoverSad: {
+      transform: 'scale(1)',
+      transition: 'all 0.1s ease-in',
       '&:hover': {
         border: `4px solid ${colors.blue}`,
+        transform: 'scale(1.04)',
       },
     },
     hoverDizzy: {
+      transform: 'scale(1)',
+      transition: 'all 0.1s ease-in',
       '&:hover': {
         border: `4px solid ${colors.violet}`,
+        transform: 'scale(1.04)',
       },
     },
     hoverSurprised: {
+      transform: 'scale(1)',
+      transition: 'all 0.1s ease-in',
       '&:hover': {
         border: `4px solid ${colors.lime}`,
+        transform: 'scale(1.04)',
       },
     },
     '@keyframes jiggle': {

@@ -1,22 +1,23 @@
 import * as React from 'react';
 import cx from 'clsx';
-import useStyles from './VideoLinkPlayer.styles';
+import useStyles from './Player.styles';
 import ReactPlayer from 'react-player';
 
-export interface IVideoLinkPlayerProps {
+export interface IPlayerProps {
   url: string;
   muted?: boolean;
   backgroundThumbnail?: string;
   defaultVolume?: number;
 }
 
-const Taste: React.FC<IVideoLinkPlayerProps> = ({
+const Taste: React.FC<IPlayerProps> = ({
   url,
   muted = true,
   defaultVolume = 0.5,
   backgroundThumbnail,
 }) => {
   const classes = useStyles({ backgroundThumbnail });
+  
   const playerRef = React.useRef(null);
   const [error, setIsError] = React.useState<boolean>(false);
 

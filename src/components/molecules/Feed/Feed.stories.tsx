@@ -1,34 +1,35 @@
 import * as React from 'react';
 import { Story, Meta } from '@storybook/react';
 // import { action } from '@storybook/addon-actions';
-import VideoLinkPlayer, { IVideoLinkPlayerProps } from './VideoLinkPlayer';
+import Feed, { IFeedProps } from './Feed';
+import { posts } from './posts';
+
+
 
 export default {
-  title: 'Atoms/VideoLinkPlayer',
-  component: VideoLinkPlayer,
+  title: 'Molecules/Feed',
+  component: Feed,
   parameters: {
     backgrounds: {
       default: 'default',
-      values: [{ name: 'default', value: '#111' }],
+      values: [{ name: 'default', value: '#222' }],
     },
   },
 } as Meta;
 
-const Template: Story<IVideoLinkPlayerProps> = (args) => (
-  <VideoLinkPlayer {...args} />
-);
+const Template: Story<IFeedProps> = (args) => <Feed {...args} />;
 
 export const Default = Template.bind({});
 
 Default.args = {
-  url: 'https://www.youtube.com/watch?v=Hqm7rZm26tI',
+  posts,
 };
 
-
 const wideContainerDecorator = (Story: Story): React.ReactElement<unknown> => (
-  <div style={{ width: 400, height: 400, display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+  <div>
     <Story />
   </div>
 );
 
 Default.decorators = [wideContainerDecorator];
+
