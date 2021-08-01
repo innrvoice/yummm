@@ -23,8 +23,6 @@ const Feed: React.FC<IFeedProps> = ({ posts }) => {
       setContainerWidthPx(width + MARGIN);
       if (width > 1280) {
         setPostSizePx(Math.floor((width - MARGIN * 3) / 4));
-        console.log('here');
-
       } else if (width < 1280 && width > 900) {
         setPostSizePx(Math.floor((width - MARGIN * 2) / 3));
       } else if (width < 900 && width > 700) {
@@ -34,6 +32,8 @@ const Feed: React.FC<IFeedProps> = ({ posts }) => {
       }
     },
   });
+  const [videoPlaying, setVideoPlaying] = React.useState<string | null>(null);
+  const handlePlayStart = (id: string) => () => setVideoPlaying(id);
 
   return (
     <div ref={observe} className={classes.wrap}>
@@ -44,8 +44,6 @@ const Feed: React.FC<IFeedProps> = ({ posts }) => {
             style={{
               marginLeft: `${MARGIN / 2}px`,
               marginRight: `${MARGIN / 2}px`,
-              // border: '1px solid red',
-              // boxSizing: 'border-box',
             }}
           >
             <Post
@@ -59,6 +57,8 @@ const Feed: React.FC<IFeedProps> = ({ posts }) => {
               linkIcon={post.linkIcon}
               commentsNum={post.commentsNum}
               handleLinkClick={() => console.log('aaaaaaaaaa')}
+              handlePlayStart={handlePlayStart(post.id)}
+              isPlaying={videoPlaying ? post.id === videoPlaying ? true : false : false}
             />
           </div>
         ))}

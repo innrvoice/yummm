@@ -16,6 +16,8 @@ export interface IPostProps {
   linkIcon?: string;
   commentsNum?: number;
   handleLinkClick?: () => void | Promise<void>;
+  handlePlayStart?: () => void;
+  isPlaying?: boolean;
 }
 
 const Post: React.FC<IPostProps> = ({
@@ -27,7 +29,9 @@ const Post: React.FC<IPostProps> = ({
   linkTitle,
   linkIcon,
   handleLinkClick,
+  handlePlayStart,
   commentsNum,
+  isPlaying,
 }) => {
   const classes = useStyles({ linkIcon });
 
@@ -41,7 +45,7 @@ const Post: React.FC<IPostProps> = ({
         {(type === 'images' || type === 'link') && (
           <Image urls={urls} width={width} />
         )}
-        {(type === 'video' || type === 'audio') && <Player url={urls[0]} />}
+        {(type === 'video' || type === 'audio') && <Player url={urls[0]} handlePlayStart={handlePlayStart} isPlaying={isPlaying} />}
         <div className={classes.rater}>
           <Rater
             winningTaste="lol"

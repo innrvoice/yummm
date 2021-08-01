@@ -8,6 +8,8 @@ export interface IPlayerProps {
   muted?: boolean;
   backgroundThumbnail?: string;
   defaultVolume?: number;
+  handlePlayStart?: () => void; 
+  isPlaying?: boolean;
 }
 
 const Taste: React.FC<IPlayerProps> = ({
@@ -15,6 +17,8 @@ const Taste: React.FC<IPlayerProps> = ({
   muted = true,
   defaultVolume = 0.5,
   backgroundThumbnail,
+  handlePlayStart,
+  isPlaying,
 }) => {
   const classes = useStyles({ backgroundThumbnail });
   
@@ -35,7 +39,7 @@ const Taste: React.FC<IPlayerProps> = ({
           height="100%"
           url={url}
           // pip={pip}
-          // playing={playing}
+          playing={isPlaying}
           controls={true}
           // light={true}
           loop={true}
@@ -44,7 +48,7 @@ const Taste: React.FC<IPlayerProps> = ({
           muted={muted}
           onReady={() => console.log('onReady')}
           onStart={() => console.log('onStart')}
-          // onPlay={this.handlePlay}
+          onPlay={handlePlayStart}
           // onEnablePIP={this.handleEnablePIP}
           // onDisablePIP={this.handleDisablePIP}
           // onPause={this.handlePause}
