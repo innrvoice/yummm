@@ -1,10 +1,4 @@
 import { createUseStyles } from 'react-jss';
-import { colors } from '../../../theme';
-import gotolink from '../../../assets/openlink.svg';
-
-interface INeededProps {
-  linkIcon?: string;
-}
 
 export default createUseStyles(
   {
@@ -15,7 +9,7 @@ export default createUseStyles(
       display: 'flex',
       flexWrap: 'wrap',
       '& > div': {
-        marginBottom: 30,
+        marginBottom: 40,
       },
     },
   },

@@ -11,25 +11,15 @@ const ImageSorter: React.FC<IImageSorterProps> = ({ images }) => {
   const classes = useStyles();
 
   const [imgs, setImgs] = React.useState(images);
-  const [isDragging, setIsDragging] = React.useState(-1);
-  const [animate, setAnimate] = React.useState(0) as any;
 
-  let refs = {} as any; // Record<string, Record<string, React.Ref<HTMLElement> | number>>;
+  let refs = {} as any; //TODO: any
 
-  const constraintsRef = React.useRef(null);
+  const constraintsRef = React.useRef<HTMLDivElement>(null);
 
-  const dragStart = (index: number) => () => {
-    setIsDragging(index);
-  };
-
-  const drag = (index: number) => (event, info) => {
-    console.log('!!!', event, info, refs);
-    console.log('asdasd', constraintsRef);
+  const drag = (index: number) => (event: MouseEvent, info: EventInfo) => {
     let found = -1;
     Object.keys(refs).map((key) => {
-      console.log('aaaa', key);
-      console.log('vvvv', refs);
-      if (refs) {
+      if (refs && constraintsRef && constraintsRef.current) {
         const xMax =
           refs[key].ref.current.offsetLeft +
           refs[key].ref.current.clientWidth +
@@ -44,8 +34,9 @@ const ImageSorter: React.FC<IImageSorterProps> = ({ images }) => {
             refs[key].ref.current.offsetLeft +
               constraintsRef.current.offsetLeft &&
           info.point.x <= xMax &&
-          info.point.y >= refs[key].ref.current.offsetTop +
-          constraintsRef.current.offsetTop&&
+          info.point.y >=
+            refs[key].ref.current.offsetTop +
+              constraintsRef.current.offsetTop &&
           info.point.y <= yMax
         ) {
           found = refs[key].index;
@@ -84,18 +75,12 @@ const ImageSorter: React.FC<IImageSorterProps> = ({ images }) => {
     } else {
       setImgs([...imgs]);
     }
-    setIsDragging(-1);
-  };
-
-  const onDrag = (index: number) => (event, info) => {
-    console.log('aaaaaaaaaa', info.point.x, info.point.y);
-    setTimeout(() => setAnimate(info.point.x), 500);
   };
 
   const Item = (img: string, index: number) => {
     const ref = React.useRef(null);
 
-    const t: any = {};
+    const t: any = {}; //TODO: any
     t[`ref${index}`] = { index, ref };
     refs = { ...refs, ...t };
 
@@ -103,7 +88,7 @@ const ImageSorter: React.FC<IImageSorterProps> = ({ images }) => {
       <motion.div
         ref={ref}
         key={`image${index}${Math.random()}`}
-        animate={{ x: animate, y: 0 }}
+        animate={{ x: 0, y: 0 }}
         style={{ backgroundImage: `url(${img}` }}
         className={classes.imageWrap}
         whileDrag={{
@@ -111,7 +96,6 @@ const ImageSorter: React.FC<IImageSorterProps> = ({ images }) => {
           zIndex: 4,
         }}
         drag={true}
-        onDrag={onDrag(index)}
         dragConstraints={constraintsRef}
         onDragEnd={drag(index)}
         dragElastic={0.2}
@@ -137,7 +121,9 @@ const ImageSorter: React.FC<IImageSorterProps> = ({ images }) => {
 
   return (
     <div className={cx(classes.root)} ref={constraintsRef}>
-      <div className={classes.subRoot}>{imgs.map((img, index) => BgItem(img, index))}</div>
+      <div className={classes.subRoot}>
+        {imgs.map((img, index) => BgItem(img, index))}
+      </div>
       {imgs.map((img, index) => Item(img, index))}
     </div>
   );

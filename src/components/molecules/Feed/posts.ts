@@ -40,8 +40,8 @@ export const posts: IPost[] = [
     type: 'link',
     title: 'Some lovely Bulldogs to enjoy!',
     description:
-      'I just love hove the look here. I just love hove the look here. I just love hove the look here. ',
-    commentsNum: 120,
+      'I just love hove the look here. I just love hove the look here. I just love hove the look here. I just love hove the look here. I just love hove the look here. I just love hove the look here.',
+    commentsNum: 150,
     linkTitle: 'CNN.COM',
     linkUrl: 'http://yandex.ru',
     linkIcon: 'https://icons.iconarchive.com/icons/dakirby309/windows-8-metro/256/Web-CNN-Metro-icon.png',
