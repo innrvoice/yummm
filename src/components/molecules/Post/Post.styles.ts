@@ -11,6 +11,7 @@ export default createUseStyles(
     root: {
       display: 'flex',
       flexDirection: 'column',
+      overflow: 'hidden',
     },
     title: {
       fontSize: 22,

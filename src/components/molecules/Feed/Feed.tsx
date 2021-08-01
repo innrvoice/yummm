@@ -18,9 +18,8 @@ const Feed: React.FC<IFeedProps> = ({ posts }) => {
   const classes = useStyles();
   const [postSizePx, setPostSizePx] = React.useState<null | number>(null);
   const [containerWidthPx, setContainerWidthPx] = React.useState<null | number>(null);
-  const { observe, unobserve, width, height, entry } = useDimensions({
-    onResize: ({ observe, unobserve, width, height, entry }) => {
-      // Triggered whenever the size of the target is changed...
+  const { observe, unobserve, width} = useDimensions({
+    onResize: ({ width }) => {
       setContainerWidthPx(width + MARGIN);
       if (width > 1280) {
         setPostSizePx(Math.floor((width - MARGIN * 3) / 4));
@@ -33,19 +32,8 @@ const Feed: React.FC<IFeedProps> = ({ posts }) => {
       } else if (width < 700) {
         setPostSizePx(width);
       }
-      // unobserve(); // To stop observing the current target element
-      // observe(); // To re-start observing the current target element
     },
   });
-
-  // const [width, setWidth] = React.useState(null);
-  // const root = React.useCallback(node => {
-  //   if (node !== null) {
-  //     console.log('>>>', node.current.offsetWidth);
-  //     setWidth(node.getBoundingClientRect().width);
-  //   }
-  // }, []);
-  console.log('!!!>>>', width, postSizePx);
 
   return (
     <div ref={observe} className={classes.wrap}>
